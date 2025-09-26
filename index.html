@@ -5,11 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wo ist Wydec?</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        >
+
         <style>
             body {
                 margin: 0;
                 background-color: black;
+                font-family: "Space Mono", monospace;
+                font-weight: 400;
+                font-style: normal;
+                color: #6abdca;
             }
+
             .video-parent {
                 width: 100vw;
                 height: 100vh;
@@ -30,12 +42,23 @@
             .head {
                 position: absolute;
                 width: 100vw;
-                bottom: 6vh;
+                bottom: 8vh;
                 text-align: center;
-                font-weight: 900;
-                font-size: 5vh;
+                font-weight: 700;
+                font-size: 50px;
                 color: #6abdca;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                line-height: 1.2;
+            }
+            .wahrheit-text {
+                font-weight: 400;
+                font-size: smaller;
+            }
+            .hinweis-text {
+                opacity: 0.4;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                font-size: 14px;
             }
         </style>
     </head>
@@ -58,13 +81,18 @@
             </video>
         </div>
 
-        <p class="head">Wo ist Wydec?</p>
+        <div class="head">
+            <span class="main-text">Wo ist Wydec?</span><br/>
+            <span class="wahrheit-text"><b>Wahrheit</b> Samstag 0.<sup>00</sup></span>
+        </div>
+        <div class="hinweis-text">Krautsalat</div>
 
         <!-- BACKGROUND MUSIC -->
         <audio src="/theme-music.mp3" autoplay loop></audio>
 
         <script>
-            window.onmousedown = () => document.querySelector("audio").play();
+            window.onmousedown = () =>
+                document.querySelector("audio").play();
         </script>
     </body>
 </html>
